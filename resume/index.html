@@ -7,13 +7,11 @@
   <meta name="generator" content="Gatsby 2.18.12">
   <link rel="manifest" href="/manifest.webmanifest">
   <meta name="theme-color" content="#353535">
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" type="text/css" href="/static/styles.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  {% if title %}
-  <title>{{ title }} | Jean Bougeois-Cruz</title>
-  {% else %}
-  <title>Jean Bougeois-Cruz</title>
-  {% endif %}
+  
+  <title>Resume | Jean Bougeois-Cruz</title>
+  
 </head>
 
 <body>
@@ -32,7 +30,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a id="resume" class="nav-link mx-2" href="{{ url_for('resume') }}">
+              <a id="resume" class="nav-link mx-2" href="/resume/">
                 resume
               </a>
             </li>
@@ -45,7 +43,12 @@
         </div>
       </nav>
     </div>
-    {% block content %}{% endblock content %}
+    
+<div class="d-flex justify-content-center" style="width:100%;height:100%;">
+  <iframe id="pdf-frame" src="https://drive.google.com/file/d/187Lk6GvCNzFQaYW1rs5Vj1BC4S-UmvtA/preview" frameborder="0" type="application/pdf" allowfullscreen>
+  </iframe>
+</div>
+
   </div>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
