@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=n">
+  <meta name="generator" content="Gatsby 2.18.12">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#353535">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  {% if title %}
+  <title>{{ title }} | Jean Bougeois-Cruz</title>
+  {% else %}
+  <title>Jean Bougeois-Cruz</title>
+  {% endif %}
+</head>
+
+<body>
+  <div id="all" style="height:100%;width:100%">
+    <div id="navigation" class="fixed-top">
+      <nav class="navbar navbar-dark navbar-expand-md primary-nav container">
+        <a class="nav-item nav-link pl-0 mr-4" aria-current="page" href="/">jean bougeois-cruz</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbar-main" class="collapse navbar-collapse">
+          <ul class="navbar-nav align-items-center ml-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="https://www.linkedin.com/in/jean-bougeois-cruz-234787b8/" target="__blank">
+                <span style="color: #0077b5">linked</span>in
+              </a>
+            </li>
+            <li class="nav-item">
+              <a id="resume" class="nav-link mx-2" href="{{ url_for('resume') }}">
+                resume
+              </a>
+            </li>
+            <li class="nav-item">
+              <a id="contact-button" href="mailto:me@jeanbougeois.com" class="nav-item btn btn-layered offset square" role="button" aria-pressed="true">
+                contact me
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    {% block content %}{% endblock content %}
+  </div>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
