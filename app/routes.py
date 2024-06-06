@@ -1,10 +1,9 @@
 from flask import render_template
-from . import create_app
-
-app = create_app()
+from flask import current_app as app
 
 @app.route('/')
 def home():
+    print("Home route accessed")
     return render_template('index.html', title='Home')
 
 @app.route('/resume/')
